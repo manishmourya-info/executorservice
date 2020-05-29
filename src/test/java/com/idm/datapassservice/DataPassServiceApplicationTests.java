@@ -1,4 +1,4 @@
-package com.springboot.datapassservice;
+package com.idm.datapassservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
