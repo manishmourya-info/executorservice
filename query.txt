@@ -1,4 +1,7 @@
-update datapass.campaign_lead set lead_headers = 'Accept:application/json;Content-Type:application/json',response_json=null,response_code=null,lead_json='{ "id": 0, "petId": 0, "quantity": 0, "shipDate": "ss", "status": "placed", "complete": true}' where id!=0;
+update datapass.campaign_lead set lead_json = '{"id": 0,"petId": 0,"quantity": 0,"shipDate": "2020-05-29T13:13:01.990Z","status": "placed","complete": true}',lead_headers = 'Accept:application/json;Content-Type:application/json',response_json=null,response_code=null where api_url = 'https://petstore.swagger.io/v2/store/order' and id!=0;
 
+update datapass.campaign_lead set lead_json = '{"login":"login","password":"password"}',lead_headers = 'Accept:application/json;Content-Type:application/json',response_json=null,response_code=null where api_url = 'https://reqbin.com/echo/post/json' and id!=0;
+
+update datapass.campaign_lead set lead_json = '{"id": 0,"petId": 0,"quantity": 0,"shipDate": "ZZZ","status": "placed","complete": true}',lead_headers = 'Accept:application/json;Content-Type:application/json',response_json=null,response_code=null where api_url = 'https://petstore.swagger.io/v2/store/order' and id in (4,6,8);
 
 select * from datapass.campaign_lead where response_json is not null;
