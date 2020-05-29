@@ -1,0 +1,4 @@
+update datapass.campaign_lead set lead_headers = 'Accept:application/json;Content-Type:application/json',response_json=null,response_code=null,lead_json='{ "id": 0, "petId": 0, "quantity": 0, "shipDate": "ss", "status": "placed", "complete": true}' where id!=0;
+
+
+select * from datapass.campaign_lead where response_json is not null;
